@@ -8,3 +8,8 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Главная{% endblock %} - Доска
         объявлений</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" type="text/css"
+        href="{% static 'main/sryle.css' %}">
+        {% bootstrap_javascript jquery='slim' %}
+    </head>
