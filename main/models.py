@@ -15,7 +15,7 @@ class Rubric(models.Model):
 
 class SuperRubricManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(super_rubric_isnull=True)
+        return super().get_queryset().filter(super_rubric__isnull=True)
     
 class SuperRubric(Rubric):
     objects = SuperRubricManager()
@@ -30,7 +30,7 @@ class SuperRubric(Rubric):
 
 class SubRubricManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(super_rubric_isnull=True)
+        return super().get_queryset().filter(super_rubric__isnull=True)
 
 class SubRubric(Rubric):
     objects = SubRubricManager()
